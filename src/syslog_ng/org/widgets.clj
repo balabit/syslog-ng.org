@@ -34,7 +34,11 @@
       [:li
        [:a.nav-link {:href "#news"} "News"]]
       [:li
-       [:a.nav-link {:href "#contact"} "Contact us"]]]]]])
+       [:a.nav-link {:href "#contact"} "Contact us"]]]]
+
+    [:ul.nav.navbar-nav {:style "position:absolute;right:1.5em;top:0.5em;"}
+     [:li
+      [:a {:href "http://www.syslog-ng.com/"} ".com"]]]]])
 
 (defn- page:jumbotron []
   [:div.jumbotron {:id "top"}
