@@ -1,5 +1,6 @@
 body {
   font-size: 14px;
+  overflow: scroll;
 }
 body, h1, h2, h3, h4, h5, h6 {
   font-family: helvetica, arial, sans-serif;
@@ -265,4 +266,17 @@ footer {
   footer .pull-right {
     display: none;
   }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #e6e6e6;
+}
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #cccccc;
 }
