@@ -48,7 +48,11 @@
     [:p
      [:a.btn.btn-primary.btn-lg {:href "https://github.com/balabit/syslog-ng"}
       "Visit us at GitHub "
-      [:span.fa.fa-chevron-circle-right.fa-lg]]]]])
+      [:span.fa.fa-chevron-circle-right.fa-lg]]]
+
+    [:p.small.jumbolinks
+     [:a {:href "http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.5-guides/en/syslog-ng-ose-v3.5-guide-admin/html/index.html"} "Documentation"]
+     [:a {:href "http://www.balabit.com/network-security/syslog-ng/opensource-logging-system/downloads/3rd-party"} "Third-party packages"]]]])
 
 (defn- widget:container [id title & body]
   [:div.container

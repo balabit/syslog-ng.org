@@ -279,3 +279,12 @@ footer {
 ::-webkit-scrollbar-thumb:window-inactive {
   background: #cccccc;
 }
+
+.jumbotron p.small {
+        font-size: 85%;
+}
+
+.jumbolinks a {
+        margin-left: 1em;
+        margin-right: 1em;
+}
