@@ -36,7 +36,8 @@
       [:li
        [:a.nav-link {:href "#contact"} "Contact us"]]]]
 
-    [:ul.nav.navbar-nav {:style "position:absolute;right:1.5em;top:0.5em;"}
+    [:ul.nav.navbar-nav.visible-md.visible-lg
+     {:style "position:absolute;right:1.5em;top:0.5em;"}
      [:li
       [:a {:href "http://www.syslog-ng.com/"} ".com"]]]]])
 
@@ -48,7 +49,7 @@
     [:p
      [:a.btn.btn-primary.btn-lg {:href "https://github.com/balabit/syslog-ng"}
       "Visit us at GitHub "
-      [:span.fa.fa-chevron-circle-right.fa-lg]]]
+      [:span.fa.fa-chevron-circle-right.fa-lg.hidden-xs.hidden-sm]]]
 
     [:p.small.jumbolinks
      [:a {:href "http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.5-guides/en/syslog-ng-ose-v3.5-guide-admin/html/index.html"} "Documentation"]

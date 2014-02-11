@@ -44,6 +44,12 @@ body, h1, h2, h3, h4, h5, h6 {
 .navbar ul.nav li button {
   margin: 0.7em 0 0 1em;
 }
+.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:hover {
+        border-color: #ffc;
+}
+.navbar-default .navbar-toggle .icon-bar {
+        background-color: #ffc;
+}
 .jumbotron {
   background: #d8f2f0;
   color: #333;
@@ -261,6 +267,9 @@ footer {
   }
   .jumbotron {
     font-size: 12px;
+  }
+  .jumbotron .btn-lg {
+    font-size: 20px;
   }
   footer .pull-right {
     display: none;
