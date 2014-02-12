@@ -59,7 +59,7 @@
     [:div.row.contact
      [:div.col-md-10.col-md-offset-1.text-center
       [:div.hi-icon-wrap
-       (link-to "https://twitter.com/syslog_ng"
+       (link-to "https://twitter.com/sngOSE"
                 [:i.hi-icon.fa.fa-twitter])
        (link-to "https://github.com/balabit/syslog-ng"
                 [:i.hi-icon.fa.fa-github])
