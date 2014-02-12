@@ -43,7 +43,9 @@
   [:div.jumbotron {:id "top"}
    [:div.container
     [:h1 "syslog-ng"]
-    [:h2 "An enhanced syslog daemon, the Babel Fish of event processing"]
+    [:h2 "Open Source log management solution with over a million
+    global users, an enhanced syslog daemon, the Babel Fish of event
+    processing"]
     [:p
      [:a.btn.btn-primary.btn-lg {:href "https://github.com/balabit/syslog-ng"}
       "Visit us at GitHub "
