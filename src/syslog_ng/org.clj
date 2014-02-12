@@ -11,9 +11,10 @@
 (defn get-assets []
   (concat
    (assets/load-bundles "resources/public"
-                        {"css/all.css" ["/css/bootstrap.min.css"
+                        {"css/all.css" ["/css/bootstrap.css"
+                                        "/css/bootstrap-theme.css"
                                         "/css/syslog-ng.org.css"]
-                         "js/all.js" ["/js/bootstrap.min.js"
+                         "js/all.js" ["/js/bootstrap.js"
                                       "/js/syslog-ng.org.js"]})))
 
 (def pages {"/index.html" (w/index)})
