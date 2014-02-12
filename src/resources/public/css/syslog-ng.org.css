@@ -128,9 +128,7 @@ body, h1, h2, h3, h4, h5, h6 {
   line-height: 1.5em;
   margin: 1em 0;
 }
-.contact {
-  margin-bottom: 20em;
-}
+
 footer {
   background: #111;
   color: #fff;
@@ -140,16 +138,15 @@ footer {
 .hi-icon-wrap {
 	text-align: center;
 	margin: 0 auto;
-	padding: 2em 0 3em;
 }
 
 .hi-icon {
 	display: inline-block;
 	font-size: 0px;
 	cursor: pointer;
-	margin: 15px 30px;
-	width: 90px;
-	height: 90px;
+	margin: 7px 15px;
+	width: 45px;
+	height: 45px;
 	border-radius: 50%;
 	text-align: center;
 	position: relative;
@@ -196,8 +193,8 @@ footer {
 
 .hi-icon:before {
 	speak: none;
-	font-size: 48px;
-	line-height: 90px;
+	font-size: 24px;
+	line-height: 45px;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;

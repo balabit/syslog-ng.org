@@ -32,9 +32,7 @@
       [:li
        [:a.nav-link {:href "#features"} "Features"]]
       [:li
-       [:a.nav-link {:href "#news"} "News"]]
-      [:li
-       [:a.nav-link {:href "#contact"} "Contact us"]]]]
+       [:a.nav-link {:href "#news"} "News"]]]]
 
     [:ul.nav.navbar-nav.visible-md.visible-lg
      {:style "position:absolute;right:1.5em;top:0.5em;"}
@@ -53,7 +51,20 @@
 
     [:p.small.jumbolinks
      [:a {:href "http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.5-guides/en/syslog-ng-ose-v3.5-guide-admin/html/index.html"} "Documentation"]
-     [:a {:href "http://www.balabit.com/network-security/syslog-ng/opensource-logging-system/downloads/3rd-party"} "Third-party packages"]]]])
+     [:a {:href
+          "http://www.balabit.com/network-security/syslog-ng/opensource-logging-system/downloads/3rd-party"}
+      "Third-party packages"]]
+    [:div.row.contact
+     [:div.col-md-10.col-md-offset-1.text-center
+      [:div.hi-icon-wrap
+       (link-to "https://twitter.com/syslog_ng"
+                [:i.hi-icon.fa.fa-twitter])
+       (link-to "https://github.com/balabit/syslog-ng"
+                [:i.hi-icon.fa.fa-github])
+       (link-to "https://lists.balabit.hu/mailman/listinfo/syslog-ng"
+                [:i.hi-icon.fa.fa-envelope])
+       (link-to "irc://chat.freenode.net/#syslog-ng"
+                [:i.hi-icon.fa.fa-users])]]]]])
 
 (defn- widget:container [id title & body]
   [:div.container
@@ -157,23 +168,6 @@
       opportunities for any student to learn and earn a name with
       contributing to software used world-wide."]]))
 
-(defn- page:contact-us []
-  (widget:container-alternate
-   (widget:container
-    "contact" "Contact us"
-
-    [:div.row.contact
-     [:div.col-md-10.col-md-offset-1.text-center
-      [:div.hi-icon-wrap
-       (link-to "https://twitter.com/syslog_ng"
-                [:i.hi-icon.fa.fa-twitter])
-       (link-to "https://github.com/balabit/syslog-ng"
-                [:i.hi-icon.fa.fa-github])
-       (link-to "https://lists.balabit.hu/mailman/listinfo/syslog-ng"
-                [:i.hi-icon.fa.fa-envelope])
-       (link-to "irc://chat.freenode.net/#syslog-ng"
-                [:i.hi-icon.fa.fa-users])]]])))
-
 (defn- page:footer []
   [:footer
    [:div.container.clearfix
@@ -191,7 +185,6 @@
     (page:highlights)
     (page:features)
     (page:news)
-    (page:contact-us)
     (page:footer)
 
     (include-js "http://code.jquery.com/jquery-1.10.1.min.js")
