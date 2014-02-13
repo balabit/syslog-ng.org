@@ -44,11 +44,11 @@
    [:div.container
     [:h1 "syslog-ng"]
     [:h2 "Open Source log management solution with over a million
-    global users, an enhanced syslog daemon, the Babel Fish of event
+    global users, an enhanced syslog daemon: the Babel fish of event
     processing"]
     [:p
      [:a.btn.btn-primary.btn-lg {:href "https://github.com/balabit/syslog-ng"}
-      "Visit us at GitHub "
+      "Visit us on GitHub "
       [:span.fa.fa-chevron-circle-right.fa-lg.hidden-xs.hidden-sm]]]
 
     [:p.small.jumbolinks
@@ -87,23 +87,23 @@
    [:div.row.highlights
     (widget:highlight-ball
      "code" "Open source"
-     "Released under a combination of the GNU General Public License
-      and Lesser General Public License, with no contributor
-      agreements. Developed in the open: code, issues, mailing list
+     "Released under a combination of the GNU General Public License (GPL)
+      and Lesser General Public License (LGPL) - contributor agreement
+      not required. Developed in the open: code, issues, mailing list
       all available!")
 
     (widget:highlight-ball
      "sitemap" "Scalable"
-     "While syslog-ng can scale out within a single computer, to
-      utilise all available cores, thanks to its flexible
-      configuration, an architecture that spans multiple computers can
-      also be built.")
+     "The syslog-ng application scales well within a single computer, to
+      utilize all available cores. Thanks to its flexible
+      configuration, you cab also build an architecture that spans
+      multiple computers.")
 
     (widget:highlight-ball
      "wrench" "Flexible"
      "The configuration is very expressive, flexible, yet, still human
       readable. From the discrete building blocks of sources, parsers,
-      filters, rewrite rules and destinations, one can piece together
+      filters, rewrite rules, and destinations, you can build
       incredibly powerful systems.")]))
 
 (defn- widget:container-alternate [body]
@@ -119,20 +119,20 @@
       [:strong "RFC3164 or RFC5424?"] [:br]
       "Whether you want to work with legacy BSD syslog (RFC3164) or
        the enhanced RFC5424 protocol, syslog-ng has you covered. Its
-       flexible parser is able to process pretty much any variant of
-       these one can find out in the wild."]
+       flexible parser can process pretty much any variant of
+       these protocols that you find in the wild."]
 
      [:p.col-md-4.col-sm-6
       [:strong "You have unstructured data?"] [:br]
-      "You have data in an unstructured format? That's not a problem,
-       either: syslog-ng comes with a set of parsers built-in, which
-       one can combine to build very complex things."]
+      "You have data in an unstructured format? That's not a problem:
+       syslog-ng comes with a set of built-in parsers, which
+       you can combine to build very complex things."]
 
      [:p.col-md-4.col-sm-6
       [:strong "Are your logs all over the place?"] [:br]
       "Even if the incoming events are all over the place, with
-       syslog-ng's powerful processing capabilities, one can corellate
-       events together, and transform them into a much more useful
+       syslog-ng's you can correlate events together, and transform
+       them into a much more useful
        structure."]]
     [:div.row.features
      [:p.col-md-4.col-sm-6
@@ -151,7 +151,7 @@
      [:p.col-md-4.col-sm-6
       [:strong "You need something special?"] [:br]
       "Even if you need something unique, there's a good chance that
-       syslog-ng, the swiss army knife (or Babel Fish) of logging
+       syslog-ng, the swiss army knife (or Babel fish) of logging
        already has the tools to support you. But even if not,
        contributing is easy! With responsive users and developers all
        around the globe."]])))
@@ -167,7 +167,7 @@
      "As in previous years, we are applying to participate in the
       Google Summer of Code programme. We have a list of very
       interesting and worthwhile projects to pursue, great
-      opportunities for any student to learn and earn a name with
+      opportunities for any student to learn, and earn a name with
       contributing to software used world-wide."]]))
 
 (defn- page:footer []
