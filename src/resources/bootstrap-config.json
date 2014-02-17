@@ -122,6 +122,12 @@
     "@grid-gutter-width": "30px",
     "@grid-float-breakpoint": "@screen-sm-min",
     "@grid-float-breakpoint-max": "(@grid-float-breakpoint - 1)",
+    "@container-tablet": "((720px + @grid-gutter-width))",
+    "@container-sm": "@container-tablet",
+    "@container-desktop": "((940px + @grid-gutter-width))",
+    "@container-md": "@container-desktop",
+    "@container-large-desktop": "((1140px + @grid-gutter-width))",
+    "@container-lg": "@container-large-desktop",
     "@navbar-height": "50px",
     "@navbar-margin-bottom": "@line-height-computed",
     "@navbar-border-radius": "@border-radius-base",
@@ -225,8 +231,8 @@
     "@popover-arrow-width": "10px",
     "@popover-arrow-color": "#fff",
     "@popover-arrow-outer-width": "(@popover-arrow-width + 1)",
-    "@popover-arrow-outer-color": "rgba(0,0,0,.25)",
-    "@popover-arrow-outer-fallback-color": "#999",
+    "@popover-arrow-outer-color": "fadein(@popover-border-color, 5%)",
+    "@popover-arrow-outer-fallback-color": "darken(@popover-fallback-border-color, 20%)",
     "@label-default-bg": "@gray-light",
     "@label-primary-bg": "@brand-primary",
     "@label-success-bg": "@brand-success",
@@ -347,16 +353,11 @@
     "@abbr-border-color": "@gray-light",
     "@headings-small-color": "@gray-light",
     "@blockquote-small-color": "@gray-light",
+    "@blockquote-font-size": "(@font-size-base * 1.25)",
     "@blockquote-border-color": "@gray-lighter",
     "@page-header-border-color": "@gray-lighter",
     "@hr-border": "@gray-lighter",
-    "@component-offset-horizontal": "180px",
-    "@container-tablet": "((720px + @grid-gutter-width))",
-    "@container-sm": "@container-tablet",
-    "@container-desktop": "((940px + @grid-gutter-width))",
-    "@container-md": "@container-desktop",
-    "@container-large-desktop": "((1140px + @grid-gutter-width))",
-    "@container-lg": "@container-large-desktop"
+    "@component-offset-horizontal": "180px"
   },
   "css": [
     "type.less",
@@ -366,10 +367,12 @@
     "navs.less",
     "navbar.less",
     "jumbotron.less",
+    "component-animations.less",
     "utilities.less",
     "responsive-utilities.less"
   ],
   "js": [
-    "collapse.js"
+    "collapse.js",
+    "transition.js"
   ]
 }
