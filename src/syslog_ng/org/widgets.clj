@@ -43,11 +43,12 @@
   [:div.jumbotron {:id "top"}
    [:div.container
     [:h1 "syslog-ng"]
-    [:h2 "Open Source log management solution with over a million
-    global users, an enhanced syslog daemon: the Babel fish of event
-    processing"]
-    [:p
-     [:a.btn.btn-primary.btn-lg {:href "https://github.com/balabit/syslog-ng"}
+    [:h2
+     (str "Open Source log management solution with over a million "
+          "global users, an enhanced syslog daemon: the Babel fish "
+          "of event processing")]
+    [:p [:a.btn.btn-primary.btn-lg
+    {:href "https://github.com/balabit/syslog-ng"}
       "Visit us on GitHub "
       [:span.fa.fa-chevron-circle-right.fa-lg.hidden-xs.hidden-sm]]]
 
@@ -87,24 +88,25 @@
    [:div.row.highlights
     (widget:highlight-ball
      "code" "Open source"
-     "Released under a combination of the GNU General Public License (GPL)
-      and Lesser General Public License (LGPL) - contributor agreement
-      not required. Developed in the open: code, issues, mailing list
-      all available!")
+     (str "Released under a combination of the GNU General Public "
+          "License (GPL) and Lesser General Public License (LGPL) - "
+          "contributor agreement not required. Developed in the "
+          "open: code, issues, mailing list all available!"))
 
     (widget:highlight-ball
      "sitemap" "Scalable"
-     "The syslog-ng application scales well within a single computer, to
-      utilize all available cores. Thanks to its flexible
-      configuration, you cab also build an architecture that spans
-      multiple computers.")
+     (str "The syslog-ng application scales well within a single "
+          "computer, to utilize all available cores. Thanks to its "
+          "flexible configuration, you cab also build an "
+          "architecture that spans multiple computers."))
 
     (widget:highlight-ball
      "wrench" "Flexible"
-     "The configuration is very expressive, flexible, yet, still human
-      readable. From the discrete building blocks of sources, parsers,
-      filters, rewrite rules, and destinations, you can build
-      incredibly powerful systems.")]))
+     (str "The configuration is very expressive, flexible, yet, still "
+          "human readable. From the discrete building blocks of "
+          "sources, parsers, filters, rewrite rules, and "
+          "destinations, you can build incredibly powerful "
+          "systems."))]))
 
 (defn- widget:container-alternate [body]
   [:div.container-alternate body])
@@ -116,44 +118,45 @@
    [:div.row.features
     [:p.col-md-4.col-sm-6
      [:strong "RFC3164 or RFC5424?"] [:br]
-     (str "Whether you want to work with legacy BSD syslog (RFC3164)
-       or the enhanced RFC5424 protocol, syslog-ng has you covered.
-       Its flexible parser can process pretty much any variant of
-       these protocols that you find in the wild.")]
+     (str "Whether you want to work with legacy BSD syslog (RFC3164) "
+          "or the enhanced RFC5424 protocol, syslog-ng has you "
+          "covered. Its flexible parser can process pretty much any "
+          "variant of these protocols that you find in the wild.")]
 
     [:p.col-md-4.col-sm-6
      [:strong "You have unstructured data?"] [:br]
-     (str "You have data in an unstructured format? That's not a
-       problem: syslog-ng comes with a set of built-in parsers, which
-       you can combine to build very complex things.")]
+     (str "You have data in an unstructured format? That's not a "
+          "problem: syslog-ng comes with a set of built-in parsers, "
+          "which you can combine to build very complex things.")]
 
     [:p.col-md-4.col-sm-6
      [:strong "Are your logs all over the place?"] [:br]
-     (str "Even if the incoming events are all over the place, with
-       syslog-ng's you can correlate events together, and transform
-       them into a much more useful structure.")]]
+     (str "Even if the incoming events are all over the place, with "
+          "syslog-ng's you can correlate events together, and "
+          "transform them into a much more useful structure.")]]
 
    [:div.row.features
     [:p.col-md-4.col-sm-6
      [:strong "Databases, you say?"] [:br]
-     (str "If you need to store your log messages in a database, you
-       don't need to look any further! We have SQL (MySQL, PostgreSQL,
-       even Oracle!), MongoDB. We also support inserting messages into
-       Redis, if that's what you are after.")]
+     (str "If you need to store your log messages in a database, you "
+          "don't need to look any further! We have SQL (MySQL, "
+          "PostgreSQL, even Oracle!), MongoDB. We also support "
+          "inserting messages into Redis, if that's what you are "
+          "after.")]
 
     [:p.col-md-4.col-sm-6
      [:strong "Message queues?"] [:br]
-     (str "No problem! We support the Advanced Message Queuing
-       Protocol (AMQP) and the Simple Text Oriented Messaging
-       Protocol (STOMP) too, with more in the pipeline.")]
+     (str "No problem! We support the Advanced Message Queuing "
+          "Protocol (AMQP) and the Simple Text Oriented Messaging "
+          "Protocol (STOMP) too, with more in the pipeline.")]
 
     [:p.col-md-4.col-sm-6
      [:strong "You need something special?"] [:br]
-     (str "Even if you need something unique, there's a good chance
-       that syslog-ng, the swiss army knife (or Babel fish) of logging
-       already has the tools to support you. But even if not,
-       contributing is easy! With responsive users and developers all
-       around the globe.")]]))
+     (str "Even if you need something unique, there's a good chance "
+          "that syslog-ng, the swiss army knife (or Babel fish) of "
+          "logging already has the tools to support you. But even if "
+          "not, contributing is easy! With responsive users and "
+          "developers all around the globe.")]]))
 
 (defn- page:news []
   (widget:container
@@ -163,11 +166,12 @@
     [:h4 "Google Summer of Code preparations"
      [:small.pull-right [:i.fa.fa-calendar] " 2014-02-10"]]
     [:p {:style "margin-bottom: 15em"}
-     "As in previous years, we are applying to participate in the
-      Google Summer of Code programme. We have a list of very
-      interesting and worthwhile projects to pursue, great
-      opportunities for any student to learn, and earn a name with
-      contributing to software used world-wide."]]))
+     (str
+      "As in previous years, we are applying to participate in the "
+      "Google Summer of Code programme. We have a list of very "
+      "interesting and worthwhile projects to pursue, great "
+      "opportunities for any student to learn, and earn a name with "
+      "contributing to software used world-wide.")]]))
 
 (defn- page:footer []
   [:footer
@@ -193,10 +197,11 @@
     (include-js "http://code.jquery.com/jquery-1.10.1.min.js")
     (include-js "bundles/js/all.js")
 
-    [:script "(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-3350024-43', 'syslog-ng.org');
-  ga('send', 'pageview');"]]))
+    [:script
+     (str
+      "(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){"
+      "(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),"
+      "m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)"
+      "})(window,document,'script','//www.google-analytics.com/analytics.js','ga');"
+      "ga('create', 'UA-3350024-43', 'syslog-ng.org');"
+      "ga('send', 'pageview');")]]))
