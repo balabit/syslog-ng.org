@@ -96,8 +96,8 @@
     (widget:highlight-ball
      "sitemap" "Scalable"
      (str "The syslog-ng application scales well within a single "
-          "computer, to utilize all available cores. Thanks to its "
-          "flexible configuration, you cab also build an "
+          "computer, utilizing all available cores. Thanks to its "
+          "flexible configuration, you can also build an "
           "architecture that spans multiple computers."))
 
     (widget:highlight-ball
@@ -132,8 +132,8 @@
     [:p.col-md-4.col-sm-6
      [:strong "Are your logs all over the place?"] [:br]
      (str "Even if the incoming events are all over the place, with "
-          "syslog-ng's you can correlate events together, and "
-          "transform them into a much more useful structure.")]]
+          "syslog-ng's patterndb, you can correlate events together, "
+          "and transform them into a much more useful structure.")]]
 
    [:div.row.features
     [:p.col-md-4.col-sm-6
