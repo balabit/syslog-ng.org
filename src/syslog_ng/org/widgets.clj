@@ -28,6 +28,8 @@
     [:div.collapse.navbar-collapse.navbar-ex1-collapse
      [:ul.nav.navbar-nav.navbar-right
       [:li
+       [:a.nav-link {:href "#getting-started"} "Getting started"]]
+      [:li
        [:a.nav-link {:href "#highlights"} "Highlights"]]
       [:li
        [:a.nav-link {:href "#features"} "Features"]]
@@ -73,6 +75,36 @@
   [:div.container
    [:h3.subhead {:id id} title]
    body])
+
+(defn- page:getting-started []
+  (widget:container
+   "getting-started" "Getting started"
+
+   [:div.row.getting-started
+    [:div.col-md-10.col-md-offset-1
+     [:p
+      (str "To get started with syslog-ng, it must be installed. "
+           "Most GNU/Linux distributions ship with binary packages, "
+           "so either ")
+      [:code "apt-get install syslog-ng"] " or "
+      [:code "yum install syslog-ng"] " is enough to get started. "
+      "For other distributions and operating systems, the "
+      (link-to
+       "http://www.balabit.com/network-security/syslog-ng/opensource-logging-system/downloads/3rd-party"
+       "third-party packages list")
+      " may be of use. To compile from source, please consult the "
+      (link-to
+       "https://github.com/balabit/syslog-ng#installation-from-source"
+       "README") "."]
+     [:p
+      "Once installed, a simple configuration (to be placed in "
+      [:code "/etc/syslog-ng/syslog-ng.conf"] "), that puts all "
+      "system logs down into a single file, is presented below:"]
+     [:pre
+      "@version: 3.5
+source s_system   { system(); internal();                 };
+destination d_all { file(\"/var/log/all.log\");             };
+log               { source(s_system); destination(d_all); };"]]]))
 
 (defn- widget:highlight-ball [icon title text]
   [:div.col-md-4.col-sm-6.highlight
@@ -191,7 +223,7 @@
     (map (fn [f body]
            (f body))
          (cycle [identity widget:container-alternate])
-         [(page:highlights) (page:features) (page:news)])
+         [(page:getting-started) (page:highlights) (page:features) (page:news)])
     (page:footer)
 
     (include-js "http://code.jquery.com/jquery-1.10.1.min.js")

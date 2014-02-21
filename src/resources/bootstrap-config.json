@@ -361,6 +361,7 @@
   },
   "css": [
     "type.less",
+    "code.less",
     "grid.less",
     "forms.less",
     "buttons.less",
