@@ -102,9 +102,11 @@
       "system logs down into a single file, is presented below:"]
      [:pre
       "@version: 3.5
-source s_system   { system(); internal();                 };
-destination d_all { file(\"/var/log/all.log\");             };
-log               { source(s_system); destination(d_all); };"]]]))
+@include \"scl.conf\"
+
+source      s_system { system(); internal();                 };
+destination d_all    { file(\"/var/log/all.log\");             };
+log                  { source(s_system); destination(d_all); };"]]]))
 
 (defn- widget:highlight-ball [icon title text]
   [:div.col-md-4.col-sm-6.highlight
