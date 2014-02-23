@@ -24,7 +24,7 @@ body, h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   font-size: 175%;
 }
-.navbar .navbar-brand:hover {
+.navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
         color: #d8f2f0;
 }
 .navbar ul.nav li a {
@@ -37,7 +37,7 @@ body, h1, h2, h3, h4, h5, h6 {
   border-bottom: 2px solid #3e8c84;
   border-radius: 5px;
 }
-.navbar ul.nav li a:hover {
+.navbar ul.nav li a:hover, .navbar ul.nav li a:focus {
   color: #d8f2f0;
   border-bottom: 2px solid #d8f2f0;;
 }
