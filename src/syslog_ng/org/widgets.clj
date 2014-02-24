@@ -196,10 +196,27 @@ log                  { source(s_system); destination(d_all); };"]]]))
   (widget:container
    "news" "News"
 
-   [:div.col-md-10.col-md-offset-1
+   [:div.col-md-10.col-md-offset-1.news
+    [:h4 "Google Summer of Code 2014: syslog-ng ACCEPTED!"
+     [:small.pull-right [:i.fa.fa-calendar] " 2014-02-25"]]
+    [:p
+     "After two years of participating in the Google Summer of Code "
+     "programme under the umbrella of the "
+     (link-to "http://www.opensuse.org/en/" "openSUSE") " project, "
+     "this year, we are "
+     (link-to
+      "http://www.google-melange.com/gsoc/org2/google/gsoc2014/syslog_ng"
+      "accepted on our own") "! We have a "
+     (link-to
+      "https://github.com/balabit/syslog-ng/wiki/GSoC2014-Idea-&-Project-list"
+      "list of ideas") ", students are encouraged to add "
+     "their own ideas, or "
+     (link-to "#top" "contact us") " if interested, or want to know "
+     "more."]
+
     [:h4 "Google Summer of Code preparations"
      [:small.pull-right [:i.fa.fa-calendar] " 2014-02-10"]]
-    [:p {:style "margin-bottom: 15em"}
+    [:p
      (str
       "As in previous years, we are applying to participate in the "
       "Google Summer of Code programme. We have a list of very "

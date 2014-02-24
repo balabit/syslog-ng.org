@@ -124,6 +124,14 @@ body, h1, h2, h3, h4, h5, h6 {
         border-bottom: 1px solid #f0f0f0;
 }
 
+.news p {
+        margin-bottom: 2em;
+}
+
+.news p:last-child {
+        margin-bottom: 15em;
+}
+
 .contact p {
   line-height: 1.5em;
   margin: 1em 0;
