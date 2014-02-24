@@ -15,7 +15,9 @@
                                         "/css/bootstrap-theme.css"
                                         "/css/syslog-ng.org.css"]
                          "js/all.js" ["/js/bootstrap.js"
-                                      "/js/syslog-ng.org.js"]})))
+                                      "/js/syslog-ng.org.js"]})
+   (assets/load-assets "resources/public"
+                       ["/images/logo.48x48.png"])))
 
 (def pages {"/index.html" (w/index)})
 
