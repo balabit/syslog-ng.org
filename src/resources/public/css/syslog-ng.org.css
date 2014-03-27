@@ -1,9 +1,11 @@
 a {
-  color: #56ABF0;
+        color: #56ABF0;
+        text-decoration: none;
 }
 
 a:hover, a:focus {
-	color: #f7841e;
+	         color: #f7841e;
+                 text-decoration:none;
 }
 
 body {
@@ -17,6 +19,28 @@ body, h1, h2, h3, h4, h5, h6 {
 .btn {
   border-radius: 3em;
 }
+
+.btn-primary {
+        background-image: -webkit-linear-gradient(top,#56ABF0 0%,#3C91D6 100%);
+	background-image: linear-gradient(to bottom,#56ABF0 0%,#3C91D6 100%);
+        background-color: #56abf0;
+        background-repeat: repeat-x;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.18);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+	background-image: -webkit-linear-gradient(top,#5faeee 0%,#2d84cb 100%);
+	background-image: linear-gradient(to bottom,#5faeee 0%,#2d84cb 100%);
+	background-repeat: repeat-x;
+	background-color: #5faeee;
+        background-position: 0px;
+}
+.btn-primary:active, .btn-primary.active {
+	background-color: #2d6ca2;
+	border-color: #2b669a
+}
+
 .container {
   max-width: 900px;
 }
@@ -30,7 +54,7 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 .navbar .navbar-brand {
   color: #C4C4C4;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 175%;
 }
 .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
@@ -38,7 +62,7 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 .navbar ul.nav li a {
   color: #C4C4C4;
-  font-weight: bold;
+  font-weight: normal;
   padding-left: 0.5em;
   padding-right: 0.5em;
   margin: 0 1.5em 1.5em 1.5em;
@@ -155,6 +179,7 @@ footer {
   background: #1E1E1E;
   color: #585858;
   padding: 1.5em 0 0.8em;
+  font-size: 0.75em;
 }
 
 footer a, footer a:hover {
