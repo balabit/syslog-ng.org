@@ -33,7 +33,7 @@
       [:li
        [:a.nav-link {:href "#highlights"} "Highlights"]]
       [:li
-       [:a.nav-link {:href "#features"} "Features"]]
+       [:a.nav-link {:href "#why"} "Why syslog-ng?"]]
       [:li
        [:a.nav-link {:href "#news"} "News"]]]]
 
@@ -146,11 +146,11 @@ log                  { source(s_system); destination(d_all); };"]]]))
 (defn- widget:container-alternate [body]
   [:div.container-alternate body])
 
-(defn- page:features []
+(defn- page:why []
   (widget:container
-   "features" "Features"
+   "why" "Why syslog-ng?"
 
-   [:div.row.features
+   [:div.row.why
     [:p.col-md-4.col-sm-6
      [:strong "RFC3164 or RFC5424?"] [:br]
      (str "Whether you want to work with legacy BSD syslog (RFC3164) "
@@ -170,7 +170,7 @@ log                  { source(s_system); destination(d_all); };"]]]))
           "syslog-ng's patterndb, you can correlate events together, "
           "and transform them into a much more useful structure.")]]
 
-   [:div.row.features
+   [:div.row.why
     [:p.col-md-4.col-sm-6
      [:strong "Databases, you say?"] [:br]
      (str "If you need to store your log messages in a database, you "
@@ -243,7 +243,7 @@ log                  { source(s_system); destination(d_all); };"]]]))
     (map (fn [f body]
            (f body))
          (cycle [identity widget:container-alternate])
-         [(page:getting-started) (page:highlights) (page:features) (page:news)])
+         [(page:getting-started) (page:highlights) (page:why) (page:news)])
     (page:footer)
 
     (include-js "http://code.jquery.com/jquery-1.10.1.min.js")

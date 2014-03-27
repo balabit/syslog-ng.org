@@ -125,10 +125,10 @@ body, h1, h2, h3, h4, h5, h6 {
   font-size: 1.5em;
 }
 
-.features, .getting-started {
+.why, .getting-started {
   margin-bottom: 3em;
 }
-.features p {
+.why p {
   line-height: 1.5em;
   margin: 1.2em 0;
   text-align:justify;
