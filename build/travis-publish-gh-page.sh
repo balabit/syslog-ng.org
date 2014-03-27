@@ -21,7 +21,7 @@ cp -R out "$HOME"/syslog-ng.org
 
 git clone --quiet \
           --branch=gh-pages \
-          "https://${GHTOKEN}@github.com/$PROJECT_NAME" \
+          "https://${GH_TOKEN}@github.com/$PROJECT_NAME" \
           "$HOME"/gh-pages >/dev/null 2>/dev/null
 
 rm -rf "$HOME"/gh-pages/{bundles,images,index.html}
