@@ -1,0 +1,12 @@
+language: clojure
+lein: lein2
+branches:
+  only:
+    - master
+script:
+  - lein2 build-site
+after_success:
+  - build/travis-publish-gh-page.sh
+env:
+  global:
+    secure: "aKMpJjHpgCtgc+WzhPscHiBnSv5JBcpzOnKNb6Fx2aX9KSn2XIHbsc3Pr94Gp6vP9MwBBGQXSVm9lz/VHDYbuj0SI+k0UtfS7ci7p6MvZg5Sw74cU5SVuL65codydIhr0Q795iwK53pQuQS8KT0LfOnoqHy55C/A6TxEDPAfI+E="
