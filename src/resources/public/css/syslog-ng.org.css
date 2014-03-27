@@ -1,8 +1,18 @@
-body {
-  font-size: 14px;
+a {
+  color: #56ABF0;
 }
+
+a:hover, a:focus {
+	color: #f7841e;
+}
+
+body {
+  font-size: 16px;
+}
+
 body, h1, h2, h3, h4, h5, h6 {
-  font-family: helvetica, arial, sans-serif;
+        font-family: 'Asap', sans-serif;
+        color: #3B3B3B;
 }
 .btn {
   border-radius: 3em;
@@ -11,36 +21,43 @@ body, h1, h2, h3, h4, h5, h6 {
   max-width: 900px;
 }
 .container-alternate {
-        background: #d8f2f0;
+        background: #F5F5F5;
 }
 .navbar {
-  background: #3e8c84;
-  padding: 0.3em 0;
+  background: #2D2D2D;
+  padding: 0px;
   overflow: hidden;
 }
 .navbar .navbar-brand {
-  color: #ffc;
-  font-family: georgia, serif;
+  color: #C4C4C4;
   font-weight: bold;
   font-size: 175%;
 }
 .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
-        color: #d8f2f0;
+        color: #fff;
 }
 .navbar ul.nav li a {
-  color: #ffc;
+  color: #C4C4C4;
   font-weight: bold;
   padding-left: 0.5em;
   padding-right: 0.5em;
   margin: 0 1.5em 1.5em 1.5em;
   padding-bottom: 0;
-  border-bottom: 2px solid #3e8c84;
-  border-radius: 5px;
 }
 .navbar ul.nav li a:hover, .navbar ul.nav li a:focus {
-  color: #d8f2f0;
-  border-bottom: 2px solid #d8f2f0;;
+  color: #fff;
 }
+
+.navbar ul.nav li {
+	border-right: 1px solid #3b3b3b
+}
+.navbar ul.nav li:hover {
+	background: #3B3B3B
+}
+.navbar ul.nav li button {
+	margin: .7em 0 0 1em
+}
+
 .navbar ul.nav li button {
   margin: 0.7em 0 0 1em;
 }
@@ -51,19 +68,16 @@ body, h1, h2, h3, h4, h5, h6 {
         background-color: #ffc;
 }
 .jumbotron {
-  background: #d8f2f0;
-  color: #333;
+  background: #F5F5F5;
   padding: 4.5em 0 3.5em;
   text-align: center;
   margin-bottom: 0;
 }
 .jumbotron h1 {
-  font-family: georgia, serif;
   font-size: 2.5em;
 }
 .jumbotron h2 {
   font-size: 1.2em;
-  font-style: italic;
   font-weight: normal;
   line-height: 1.4em;
   margin-bottom: 1.4em;
@@ -90,7 +104,7 @@ body, h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 .highlight .highlight-ball {
-  background: #3e8c84;
+  background: #246EAB;
   border-radius: 50%;
   color: #333;
   display: inline-block;
@@ -98,7 +112,7 @@ body, h1, h2, h3, h4, h5, h6 {
   padding: 3em;
 }
 .highlight .highlight-ball:hover {
-        background: #4e9c94;
+        background: #4196DB;
         cursor: pointer;
 }
 .highlight .highlight-ball .fa {
@@ -138,9 +152,13 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 footer {
-  background: #111;
-  color: #fff;
+  background: #1E1E1E;
+  color: #585858;
   padding: 1.5em 0 0.8em;
+}
+
+footer a, footer a:hover {
+  color: #585858;
 }
 
 .hi-icon-wrap {
