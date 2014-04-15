@@ -10,8 +10,8 @@
            :content "width=device-width,initial-scale=1.0"}]
    [:title "syslog-ng.org"]
    (include-css "bundles/css/all.css")
-   (include-css "http://fonts.googleapis.com/css?family=Asap")
-   (include-css "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css")])
+   (include-css "//fonts.googleapis.com/css?family=Asap")
+   (include-css "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css")])
 
 (defn- page:navbar []
   [:nav.navbar.navbar-default.navbar-fixed-top {:role "navigation"}
