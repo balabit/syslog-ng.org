@@ -246,7 +246,7 @@ log                  { source(s_system); destination(d_all); };"]]]))
          [(page:getting-started) (page:highlights) (page:why) (page:news)])
     (page:footer)
 
-    (include-js "http://code.jquery.com/jquery-1.10.1.min.js")
+    (include-js "//code.jquery.com/jquery-1.10.1.min.js")
     (include-js "bundles/js/all.js")
 
     [:script
