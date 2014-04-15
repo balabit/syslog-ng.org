@@ -29,7 +29,7 @@ mv "$HOME"/syslog-ng.org/* "$HOME"/gh-pages/
 
 cd "$HOME"/gh-pages/
 git add -f {bundles,images,index.html} >/dev/null 2>/dev/null
-git commit -m "Publishing syslog-ng.org build #$TRAVIS_BUILD_NUMBER" >/dev/null 2>/dev/null
+git commit -m "Publishing syslog-ng.org build $TRAVIS_BUILD_NUMBER" >/dev/null 2>/dev/null
 git push -fq origin gh-pages >/dev/null 2>/dev/null
 
 echo "Finished!"
