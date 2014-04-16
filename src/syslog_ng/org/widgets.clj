@@ -256,4 +256,14 @@ log                  { source(s_system); destination(d_all); };"]]]))
       "m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)"
       "})(window,document,'script','//www.google-analytics.com/analytics.js','ga');"
       "ga('create', 'UA-3350024-43', 'syslog-ng.org');"
-      "ga('send', 'pageview');")]]))
+      "ga('send', 'pageview');")]
+    [:script
+     (str
+      "(function(){var didInit = false;function initMunchkin(){"
+      "if(didInit === false) {didInit = true;Munchkin.init('855-UZV-853');}}"
+      "var s = document.createElement('script');s.type = 'text/javascript';"
+      "s.async = true;s.src = '//munchkin.marketo.net/munchkin.js';"
+      "s.onreadystatechange = function() {if (this.readyState == 'complete' "
+      "|| this.readyState == 'loaded') {initMunchkin();}};"
+      "s.onload = initMunchkin;"
+      "document.getElementsByTagName('head')[0].appendChild(s);})();")]]))
