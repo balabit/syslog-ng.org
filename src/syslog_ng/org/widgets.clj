@@ -198,6 +198,16 @@ log                  { source(s_system); destination(d_all); };"]]]))
    "news" "News"
 
    [:div.col-md-10.col-md-offset-1.news
+    [:h4 "Google Summer of Code 2014: Accepted syslog-ng proposals"
+     [:small.pull-right [:i.fa.fa-calendar] " 2014-04-23"]]
+    [:p
+     "We received a number of very strong proposals for this years "
+     "Google Summer of Code programme, out of which, we were able "
+     "to select four. "
+     (link-to
+      "https://algernon.blogs.balabit.com/2014/04/gsoc2014-syslog-ng-accepted-projects/"
+      "Read here") " for further information."]
+
     [:h4 "Google Summer of Code 2014: syslog-ng ACCEPTED!"
      [:small.pull-right [:i.fa.fa-calendar] " 2014-02-25"]]
     [:p
