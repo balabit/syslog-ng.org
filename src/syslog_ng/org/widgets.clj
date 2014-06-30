@@ -198,6 +198,16 @@ log                  { source(s_system); destination(d_all); };"]]]))
    "news" "News"
 
    [:div.col-md-10.col-md-offset-1.news
+
+    [:h3 "Google Summer of Code 2014: Midterm"
+     [:small.pull-right [:i.fa.fa-calendar] " 2014-06-30"]]
+    [:p
+     "We are happy to share the good news that "
+     (link-to
+      "http://www.google-melange.com/gsoc/org2/google/gsoc2014/syslog_ng"
+      "all students") " passed the mid-term evaluation, and they "
+     "are all making good progress!"]
+    
     [:h4 "Google Summer of Code 2014: Accepted syslog-ng proposals"
      [:small.pull-right [:i.fa.fa-calendar] " 2014-04-23"]]
     [:p
