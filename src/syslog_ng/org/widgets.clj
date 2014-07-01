@@ -199,7 +199,7 @@ log                  { source(s_system); destination(d_all); };"]]]))
 
    [:div.col-md-10.col-md-offset-1.news
 
-    [:h3 "Google Summer of Code 2014: Midterm"
+    [:h3 {:id "news/2014-06-30"} "Google Summer of Code 2014: Midterm"
      [:small.pull-right [:i.fa.fa-calendar] " 2014-06-30"]]
     [:p
      "We are happy to share the good news that "
@@ -208,7 +208,7 @@ log                  { source(s_system); destination(d_all); };"]]]))
       "all students") " passed the mid-term evaluation, and they "
      "are all making good progress!"]
     
-    [:h4 "Google Summer of Code 2014: Accepted syslog-ng proposals"
+    [:h4 {:id "news/2014-04-23"} "Google Summer of Code 2014: Accepted syslog-ng proposals"
      [:small.pull-right [:i.fa.fa-calendar] " 2014-04-23"]]
     [:p
      "We received a number of very strong proposals for this years "
@@ -218,7 +218,7 @@ log                  { source(s_system); destination(d_all); };"]]]))
       "https://algernon.blogs.balabit.com/2014/04/gsoc2014-syslog-ng-accepted-projects/"
       "Read here") " for further information."]
 
-    [:h4 "Google Summer of Code 2014: syslog-ng ACCEPTED!"
+    [:h4 {:id "news/2014-02-25"} "Google Summer of Code 2014: syslog-ng ACCEPTED!"
      [:small.pull-right [:i.fa.fa-calendar] " 2014-02-25"]]
     [:p
      "After two years of participating in the Google Summer of Code "
@@ -235,7 +235,7 @@ log                  { source(s_system); destination(d_all); };"]]]))
      (link-to "#top" "contact us") " if interested, or want to know "
      "more."]
 
-    [:h4 "Google Summer of Code preparations"
+    [:h4 {:id "news/2014-02-10"} "Google Summer of Code preparations"
      [:small.pull-right [:i.fa.fa-calendar] " 2014-02-10"]]
     [:p
      (str
