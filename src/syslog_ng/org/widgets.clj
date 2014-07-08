@@ -61,7 +61,9 @@
      [:a {:href "http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.5-guides/en/syslog-ng-ose-v3.5-guide-admin/html/index.html"} "Documentation"]
      [:a {:href
           "http://www.balabit.com/network-security/syslog-ng/opensource-logging-system/downloads/3rd-party"}
-      "Third-party packages"]]
+      "Third-party packages"]
+     [:a.nav-link {:href "#eol"}
+      "Supported versions"]]
     [:div.row.contact
      [:div.col-md-10.col-md-offset-1.text-center
       [:div.hi-icon-wrap
@@ -281,7 +283,6 @@ log                  { source(s_system); destination(d_all); };"]]]))
    (page:header)
    [:body
     (page:navbar)
-    (page:jumbotron)
 
     contents
 
@@ -293,10 +294,81 @@ log                  { source(s_system); destination(d_all); };"]]]))
     (page:analytics)])
   )
 
+(defn- eol:intro []
+  (widget:container
+   "eol" "Support of syslog-ng OSE versions"
+
+   [:div.col-md-10.col-md-offset-1.eol
+    [:p
+     "At the moment, we have three maintained branches of syslog-ng, "
+     "but we are working on reducing that to two, once the next "
+     "branch of syslog-ng development enters the beta stage."]
+
+    [:dl
+     [:dt "Maintainance"]
+     [:dd
+      [:p
+       "The former stable branch, which receives critical bug "
+       "fixes only. People are strongly encouraged to migrate from "
+       "this to the stable one, but the branch is still supported to "
+       "some extent, to make it easier for distributions, among "
+       "others. Critical bugs are security issues, serious "
+       "regressions, and so on - I reserve the right to decide which "
+       "bugs to consider critical. Fixes from any other branch are "
+       "not backported, unless they're critical."]
+      [:p
+       "Currently the " [:strong "3.3"] " branch fills this role."]
+      [:p
+       "Expected end of life: " [:strong "2014 September"]]]
+
+     [:dt "Stable"
+      [:dd
+       [:p
+        "The stable branch, receiving all kinds of bug fixes, "
+        "including smaller fixes backported from newer branches "
+        "(including the next feature release and the development "
+        "branch too). It may also receive very small features too, "
+        "which do not affect the package as a whole: things like "
+        "the $(format-json) improvement to allow comma-separated "
+        "scopes, or being able to specify a template for the JSON "
+        "parser."]
+
+       [:p
+       "Currently the " [:strong "3.4"] " branch fills this role."]
+       [:p
+        "Expected end of life: " [:strong "2015 January"]]]]
+
+     [:dt "Feature"
+      [:dd
+       [:p
+        "The next stable branch, which we consider stable enough, but "
+        "has not received as wide testing as the stable branch yet. "
+        "This gets the most attention, as the idea is to stabilise "
+        "it as soon as possible. Other than being newer than the "
+        "Stable branch, this is treated in exactly the same way."]
+
+       [:p
+        "The " (link-to
+                "https://github.com/balabit/syslog-ng-incubator"
+                "Incubator") " is built against this branch."]
+
+       [:p
+       "Currently the " [:strong "3.5"] " branch fills this role."]
+       [:p
+        "Expected end of life: " [:strong "2016 Q1"]]]]]
+
+    [:p
+     "With the first beta release of " [:strong "3.6"] ", we "
+     "intend to drop the " [:em "Maintainance"] " branch, and "
+     "maintain only the " [:em "Stable"] " and "
+     [:em "Feature"] " branches."]]))
+
 (defn index []
   (with-redefs [*root-url* ""]
     (page:wrap
-     (map (fn [f body]
-            (f body))
-          (cycle [identity widget:container-alternate])
-          [(page:getting-started) (page:highlights) (page:why) (page:news)]))))
+     (list (page:jumbotron)
+      (map (fn [f body]
+             (f body))
+           (cycle [identity widget:container-alternate])
+           [(page:getting-started) (page:highlights) (page:why)
+            (page:news) (eol:intro)])))))

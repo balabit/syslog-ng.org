@@ -166,7 +166,7 @@ body, h1, h2, h3, h4, h5, h6 {
         margin-bottom: 2em;
 }
 
-.news p:last-child {
+.eol {
         margin-bottom: 15em;
 }
 
@@ -344,4 +344,13 @@ footer a, footer a:hover {
 .jumbolinks a {
         margin-left: 1em;
         margin-right: 1em;
+}
+
+dd {
+        margin-left: 1em;
+}
+
+dt {
+        margin-top: 2em;
+        margin-bottom: 1em;
 }
