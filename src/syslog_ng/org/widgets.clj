@@ -3,6 +3,8 @@
         [hiccup.page]
         [hiccup.element]))
 
+(def ^:dynamic *root-url*)
+
 (defn- page:header []
   [:head
    [:meta {:charset "utf-8"}]
@@ -23,19 +25,19 @@
       [:span.icon-bar]
       [:span.icon-bar]
       [:span.icon-bar]]
-     [:a.navbar-brand.nav-link {:href "#top"}
+     [:a.navbar-brand.nav-link {:href (str *root-url* "#top")}
       "syslog-ng"]]
 
     [:div.collapse.navbar-collapse.navbar-ex1-collapse
      [:ul.nav.navbar-nav.navbar-right
       [:li
-       [:a.nav-link {:href "#getting-started"} "Getting started"]]
+       [:a.nav-link {:href (str *root-url* "#getting-started")} "Getting started"]]
       [:li
-       [:a.nav-link {:href "#highlights"} "Highlights"]]
+       [:a.nav-link {:href (str *root-url* "#highlights")} "Highlights"]]
       [:li
-       [:a.nav-link {:href "#why"} "Why syslog-ng?"]]
+       [:a.nav-link {:href (str *root-url* "#why")} "Why syslog-ng?"]]
       [:li
-       [:a.nav-link {:href "#news"} "News"]]]]
+       [:a.nav-link {:href (str *root-url* "#news")} "News"]]]]
 
     [:ul.nav.navbar-nav.visible-md.visible-lg
      {:style "position:absolute;right:1.5em;top:0.5em;"}
@@ -292,8 +294,9 @@ log                  { source(s_system); destination(d_all); };"]]]))
   )
 
 (defn index []
-  (page:wrap
-   (map (fn [f body]
-          (f body))
-        (cycle [identity widget:container-alternate])
-        [(page:getting-started) (page:highlights) (page:why) (page:news)])))
+  (with-redefs [*root-url* ""]
+    (page:wrap
+     (map (fn [f body]
+            (f body))
+          (cycle [identity widget:container-alternate])
+          [(page:getting-started) (page:highlights) (page:why) (page:news)]))))
