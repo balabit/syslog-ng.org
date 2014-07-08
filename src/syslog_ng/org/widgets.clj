@@ -274,20 +274,26 @@ log                  { source(s_system); destination(d_all); };"]]]))
       "s.onload = initMunchkin;"
       "document.getElementsByTagName('head')[0].appendChild(s);})();")]))
 
-(defn index []
+(defn- page:wrap [contents]
   (html5
    (page:header)
    [:body
     (page:navbar)
     (page:jumbotron)
 
-    (map (fn [f body]
-           (f body))
-         (cycle [identity widget:container-alternate])
-         [(page:getting-started) (page:highlights) (page:why) (page:news)])
+    contents
+
     (page:footer)
 
     (include-js "//code.jquery.com/jquery-1.10.1.min.js")
     (include-js "bundles/js/all.js")
 
-    (page:analytics)]))
+    (page:analytics)])
+  )
+
+(defn index []
+  (page:wrap
+   (map (fn [f body]
+          (f body))
+        (cycle [identity widget:container-alternate])
+        [(page:getting-started) (page:highlights) (page:why) (page:news)])))
