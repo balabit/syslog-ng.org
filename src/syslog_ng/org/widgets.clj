@@ -62,6 +62,7 @@
      [:a {:href
           "http://www.balabit.com/network-security/syslog-ng/opensource-logging-system/downloads/3rd-party"}
       "Third-party packages"]
+     [:a {:href "https://github.com/balabit/syslog-ng-incubator"} "Incubator"]
      [:a.nav-link {:href "#eol"}
       "Supported versions"]]
     [:div.row.contact
