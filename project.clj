@@ -10,4 +10,6 @@
                  [ring "1.2.1"]]
   :plugins [[lein-ring "0.8.10"]]
   :ring {:handler syslog-ng.org/app}
-  :aliases {"build-site" ["run" "-m" "syslog-ng.org/export"]})
+  :aliases {"build-site" ["run" "-m" "syslog-ng.org/export"]
+            "serve" ["ring" "server"]
+            "serve-headless" ["ring" "server-headless"]})
