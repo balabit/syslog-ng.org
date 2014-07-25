@@ -68,14 +68,18 @@
     [:div.row.contact
      [:div.col-md-10.col-md-offset-1.text-center
       [:div.hi-icon-wrap
-       (link-to "https://twitter.com/sngOSE"
-                [:i.hi-icon.fa.fa-twitter])
-       (link-to "https://github.com/balabit/syslog-ng"
-                [:i.hi-icon.fa.fa-github])
-       (link-to "https://lists.balabit.hu/mailman/listinfo/syslog-ng"
-                [:i.hi-icon.fa.fa-envelope])
-       (link-to "irc://chat.freenode.net/#syslog-ng"
-                [:i.hi-icon.fa.fa-users])]]]]])
+       [:a {:href "https://twitter.com/sngOSE"
+            :title "Twitter"}
+        [:i.hi-icon.fa.fa-twitter]]
+       [:a {:href "https://github.com/balabit/syslog-ng"
+            :title "Source code"}
+        [:i.hi-icon.fa.fa-github]]
+       [:a {:href "https://lists.balabit.hu/mailman/listinfo/syslog-ng"
+            :title "Mailing list"}
+        [:i.hi-icon.fa.fa-envelope]]
+       [:a {:href "irc://chat.freenode.net/#syslog-ng"
+            :title "IRC"}
+        [:i.hi-icon.fa.fa-users]]]]]]])
 
 (defn- widget:container [id title & body]
   [:div.container
