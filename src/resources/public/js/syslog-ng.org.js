@@ -4,7 +4,6 @@ function scrollTo (link) {
 }
 
 $(".nav-link").click(function(e) {
-    e.preventDefault();
     scrollTo($(this));
 });
 
