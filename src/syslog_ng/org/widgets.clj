@@ -112,7 +112,21 @@
 
 source      s_system { system(); internal();                 };
 destination d_all    { file(\"/var/log/all.log\");             };
-log                  { source(s_system); destination(d_all); };"]]]))
+log                  { source(s_system); destination(d_all); };"]
+
+     [:div.col-md-10.col-md-offset-1.text-center
+      [:h3 "Get the source"]
+      [:ul.list-inline
+       [:li
+        [:a {:href "https://github.com/balabit/syslog-ng/releases/latest"
+             :id "release-syslog-ng"}
+         [:img {:src
+                "//img.shields.io/badge/syslog--ng-latest-246EAB.svg?style=flat"}]]]
+       [:li
+        [:a {:href "https://github.com/balabit/syslog-ng-incubator/releases/latest"
+             :id "release-syslog-ng-incubator"}
+         [:img {:src
+                "//img.shields.io/badge/syslog--ng--incubator-latest-246EAB.svg?style=flat"}]]]]]]]))
 
 (defn- widget:highlight-ball [icon title text]
   [:div.col-md-4.col-sm-6.highlight
