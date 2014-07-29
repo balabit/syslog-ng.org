@@ -217,33 +217,46 @@ log                  { source(s_system); destination(d_all); };"]
           "not, contributing is easy! With responsive users and "
           "developers all around the globe.")]]))
 
-(defn- page:news []
-  (widget:container
-   "news" "News"
+(defn- news:item [title date & content]
+  {:id (str "news/" date)
+   :title title
+   :date date
+   :content content})
 
-   [:div.col-md-10.col-md-offset-1.news
+(defn- news:item->html [item]
+  (list
+   [:h4 {:id (:id item)} (:title item)
+    [:small.pull-right [:i.fa.fa-calendar] " " (:date item)]]
 
-    [:h4 {:id "news/2014-06-30"} "Google Summer of Code 2014: Midterm"
-     [:small.pull-right [:i.fa.fa-calendar] " 2014-06-30"]]
+   (:content item)))
+
+(def news-feed
+  [(news:item
+    "Google Summer of Code 2014: Midterm"
+    "2014-06-30"
     [:p
      "We are happy to share the good news that "
      (link-to
       "http://www.google-melange.com/gsoc/org2/google/gsoc2014/syslog_ng"
       "all students") " passed the mid-term evaluation, and they "
-     "are all making good progress!"]
-    
-    [:h4 {:id "news/2014-04-23"} "Google Summer of Code 2014: Accepted syslog-ng proposals"
-     [:small.pull-right [:i.fa.fa-calendar] " 2014-04-23"]]
+     "are all making good progress!"])
+
+   (news:item
+    "Google Summer of Code 2014: Accepted syslog-ng proposals"
+    "2014-04-23"
+
     [:p
      "We received a number of very strong proposals for this years "
      "Google Summer of Code programme, out of which, we were able "
      "to select four. "
      (link-to
       "https://algernon.blogs.balabit.com/2014/04/gsoc2014-syslog-ng-accepted-projects/"
-      "Read here") " for further information."]
+      "Read here") " for further information."])
 
-    [:h4 {:id "news/2014-02-25"} "Google Summer of Code 2014: syslog-ng ACCEPTED!"
-     [:small.pull-right [:i.fa.fa-calendar] " 2014-02-25"]]
+   (news:item
+    "Google Summer of Code 2014: syslog-ng ACCEPTED!"
+    "2014-02-25"
+
     [:p
      "After two years of participating in the Google Summer of Code "
      "programme under the umbrella of the "
@@ -257,17 +270,26 @@ log                  { source(s_system); destination(d_all); };"]
       "list of ideas") ", students are encouraged to add "
      "their own ideas, or "
      (link-to "#top" "contact us") " if interested, or want to know "
-     "more."]
+     "more."])
 
-    [:h4 {:id "news/2014-02-10"} "Google Summer of Code preparations"
-     [:small.pull-right [:i.fa.fa-calendar] " 2014-02-10"]]
+   (news:item
+    "Google Summer of Code preparations"
+    "2014-02-10"
+
     [:p
      (str
       "As in previous years, we are applying to participate in the "
       "Google Summer of Code programme. We have a list of very "
       "interesting and worthwhile projects to pursue, great "
       "opportunities for any student to learn, and earn a name with "
-      "contributing to software used world-wide.")]]))
+      "contributing to software used world-wide.")])])
+
+(defn- page:news []
+  (widget:container
+   "news" "News"
+
+   [:div.col-md-10.col-md-offset-1.news
+    (map news:item->html (take 5 news-feed))]))
 
 (defn- page:footer []
   [:footer
