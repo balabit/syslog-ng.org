@@ -223,7 +223,7 @@ log                  { source(s_system); destination(d_all); };"]
 
    [:div.col-md-10.col-md-offset-1.news
 
-    [:h3 {:id "news/2014-06-30"} "Google Summer of Code 2014: Midterm"
+    [:h4 {:id "news/2014-06-30"} "Google Summer of Code 2014: Midterm"
      [:small.pull-right [:i.fa.fa-calendar] " 2014-06-30"]]
     [:p
      "We are happy to share the good news that "
