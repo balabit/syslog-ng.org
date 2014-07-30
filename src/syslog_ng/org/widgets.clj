@@ -456,5 +456,6 @@ log                  { source(s_system); destination(d_all); };"]
   (with-base-url "http://www.syslog-ng.org/"
     (apply rss/channel-xml
            {:title "syslog-ng.org news"
-            :link "http://www.syslog-ng.org/#news"}
+            :link "http://www.syslog-ng.org/#news"
+            :description "syslog-ng.org news"}
            (map news:item->rss news-feed))))
