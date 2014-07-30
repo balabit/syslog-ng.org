@@ -1,10 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <rss xmlns:atom='http://www.w3.org/2005/Atom' version='2.0'>
 <channel>
-<atom:link href='http://www.syslog-ng.org/#news/2014-06-30' rel='self' type='application/rss+xml'/>
+<atom:link href='http://www.syslog-ng.org/#news' rel='self' type='application/rss+xml'/>
 <generator>
 clj-rss
 </generator>
+<link>
+http://www.syslog-ng.org/#news
+</link>
+<title>
+syslog-ng.org news
+</title>
+<description>
+syslog-ng.org news
+</description>
+<item>
 <title>
 Google Summer of Code 2014: Midterm
 </title>
@@ -17,6 +27,7 @@ http://www.syslog-ng.org/#news/2014-06-30
 <pubDate>
 Mon, 30 Jun 2014 00:00:00 +0000
 </pubDate>
+</item>
 <item>
 <title>
 Google Summer of Code 2014: Accepted syslog-ng proposals
