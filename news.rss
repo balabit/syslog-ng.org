@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom='http://www.w3.org/2005/Atom' version='2.0'>
+<channel>
+<atom:link href='http://www.syslog-ng.org/#news/2014-06-30' rel='self' type='application/rss+xml'/>
+<generator>
+clj-rss
+</generator>
+<title>
+Google Summer of Code 2014: Midterm
+</title>
+<link>
+http://www.syslog-ng.org/#news/2014-06-30
+</link>
+<description>
+<![CDATA[<h4 id="news/2014-06-30">Google Summer of Code 2014: Midterm<small class="pull-right"><i class="fa fa-calendar"></i> 2014-06-30</small></h4><p>We are happy to share the good news that <a href="http://www.google-melange.com/gsoc/org2/google/gsoc2014/syslog_ng">all students</a> passed the mid-term evaluation, and they are all making good progress!</p>]]>
+</description>
+<pubDate>
+Mon, 30 Jun 2014 00:00:00 +0000
+</pubDate>
+<item>
+<title>
+Google Summer of Code 2014: Accepted syslog-ng proposals
+</title>
+<link>
+http://www.syslog-ng.org/#news/2014-04-23
+</link>
+<description>
+<![CDATA[<h4 id="news/2014-04-23">Google Summer of Code 2014: Accepted syslog-ng proposals<small class="pull-right"><i class="fa fa-calendar"></i> 2014-04-23</small></h4><p>We received a number of very strong proposals for this years Google Summer of Code programme, out of which, we were able to select four. <a href="https://algernon.blogs.balabit.com/2014/04/gsoc2014-syslog-ng-accepted-projects/">Read here</a> for further information.</p>]]>
+</description>
+<pubDate>
+Wed, 23 Apr 2014 00:00:00 +0000
+</pubDate>
+</item>
+<item>
+<title>
+Google Summer of Code 2014: syslog-ng ACCEPTED!
+</title>
+<link>
+http://www.syslog-ng.org/#news/2014-02-25
+</link>
+<description>
+<![CDATA[<h4 id="news/2014-02-25">Google Summer of Code 2014: syslog-ng ACCEPTED!<small class="pull-right"><i class="fa fa-calendar"></i> 2014-02-25</small></h4><p>After two years of participating in the Google Summer of Code programme under the umbrella of the <a href="http://www.opensuse.org/en/">openSUSE</a> project, this year, we are <a href="http://www.google-melange.com/gsoc/org2/google/gsoc2014/syslog_ng">accepted on our own</a>! We have a <a href="https://github.com/balabit/syslog-ng/wiki/GSoC2014-Idea-&amp;-Project-list">list of ideas</a>, students are encouraged to add their own ideas, or <a href="http://www.syslog-ng.org/#top">contact us</a> if interested, or want to know more.</p>]]>
+</description>
+<pubDate>
+Tue, 25 Feb 2014 00:00:00 +0000
+</pubDate>
+</item>
+<item>
+<title>
+Google Summer of Code preparations
+</title>
+<link>
+http://www.syslog-ng.org/#news/2014-02-10
+</link>
+<description>
+<![CDATA[<h4 id="news/2014-02-10">Google Summer of Code preparations<small class="pull-right"><i class="fa fa-calendar"></i> 2014-02-10</small></h4><p>As in previous years, we are applying to participate in the Google Summer of Code programme. We have a list of very interesting and worthwhile projects to pursue, great opportunities for any student to learn, and earn a name with contributing to software used world-wide.</p>]]>
+</description>
+<pubDate>
+Mon, 10 Feb 2014 00:00:00 +0000
+</pubDate>
+</item>
+</channel>
+</rss>
