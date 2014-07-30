@@ -16,6 +16,10 @@
    [:meta {:name "viewport"
            :content "width=device-width,initial-scale=1.0"}]
    [:title "syslog-ng.org"]
+   [:link {:href "/news.rss"
+           :rel "alternate"
+           :type "application/rss+xml"
+           :title "RSS 2.0 Feed"}]
    (include-css "bundles/css/all.css")
    (include-css "//fonts.googleapis.com/css?family=Asap")
    (include-css "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css")])
