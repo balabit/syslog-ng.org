@@ -24,12 +24,12 @@ git clone --quiet \
           "https://${GH_TOKEN}@github.com/$PROJECT_NAME" \
           "$HOME"/gh-pages >/dev/null 2>/dev/null
 
-rm -rf "$HOME"/gh-pages/{bundles,images,index.html}
+rm -rf "$HOME"/gh-pages/{bundles,images,index.html,news.rss}
 mv "$HOME"/syslog-ng.org/* "$HOME"/gh-pages/
 cp CNAME "$HOME"/gh-pages/
 
 cd "$HOME"/gh-pages/
-git add -f {bundles,images,index.html} CNAME >/dev/null 2>/dev/null
+git add -f {bundles,images,index.html,news.rss} CNAME >/dev/null 2>/dev/null
 git commit -m "Publishing syslog-ng.org build $TRAVIS_BUILD_NUMBER" >/dev/null 2>/dev/null
 git push -fq origin gh-pages >/dev/null 2>/dev/null
 

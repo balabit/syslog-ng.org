@@ -19,7 +19,8 @@
    (assets/load-assets "resources/public"
                        ["/images/logo.48x48.png"])))
 
-(def pages {"/index.html" (w/index)})
+(def pages {"/index.html" (w/index)
+            "/news.rss" (w/rss)})
 
 (def app (-> (stasis/serve-pages pages)
              (optimus/wrap get-assets optimizations/all

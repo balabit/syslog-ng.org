@@ -7,7 +7,9 @@
                  [stasis "0.7.0"]
                  [hiccup "1.0.5"]
                  [optimus "0.14.2"]
-                 [ring "1.2.1"]]
+                 [ring "1.2.1"]
+                 [clj-rss "0.1.8"]
+                 [clj-time "0.8.0"]]
   :plugins [[lein-ring "0.8.10"]]
   :ring {:handler syslog-ng.org/app}
   :aliases {"build-site" ["run" "-m" "syslog-ng.org/export"]

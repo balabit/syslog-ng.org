@@ -1,7 +1,12 @@
 (ns syslog-ng.org.widgets
   (:use [hiccup.core]
         [hiccup.page]
-        [hiccup.element]))
+        [hiccup.element]
+        [hiccup.util])
+  (:require [clj-rss.core :as rss]
+            [clj-time.core :as time]
+            [clj-time.format :as time.format]
+            [clj-time.coerce :as time.coerce]))
 
 (def ^:dynamic *root-url*)
 
@@ -230,6 +235,14 @@ log                  { source(s_system); destination(d_all); };"]
 
    (:content item)))
 
+(defn- news:item->rss [item]
+  {:title (:title item)
+   :link (str "http://www.syslog-ng.org/#" (:id item))
+   :description (str "<![CDATA[" (html (news:item->html item)) "]]>")
+   :pubDate (time.coerce/to-date (time.format/parse
+                                  (time.format/formatter "yyyy-MM-dd")
+                                  (:date item)))})
+
 (def news-feed
   [(news:item
     "Google Summer of Code 2014: Midterm"
@@ -269,7 +282,7 @@ log                  { source(s_system); destination(d_all); };"]
       "https://github.com/balabit/syslog-ng/wiki/GSoC2014-Idea-&-Project-list"
       "list of ideas") ", students are encouraged to add "
      "their own ideas, or "
-     (link-to "#top" "contact us") " if interested, or want to know "
+     (link-to "/#top" "contact us") " if interested, or want to know "
      "more."])
 
    (news:item
@@ -438,3 +451,7 @@ log                  { source(s_system); destination(d_all); };"]
            (cycle [identity widget:container-alternate])
            [(page:getting-started) (page:highlights) (page:why)
             (page:news) (eol:intro)])))))
+
+(defn rss []
+  (with-base-url "http://www.syslog-ng.org/"
+   (apply rss/channel-xml (map news:item->rss news-feed))))
