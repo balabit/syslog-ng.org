@@ -89,7 +89,10 @@
         [:i.hi-icon.fa.fa-envelope]]
        [:a {:href "irc://chat.freenode.net/#syslog-ng"
             :title "IRC"}
-        [:i.hi-icon.fa.fa-users]]]]]]])
+        [:i.hi-icon.fa.fa-users]]
+       [:a.nav-link {:href "#downloads"
+            :title "Downloads"}
+        [:i.hi-icon.fa.fa-download]]]]]]])
 
 (defn- widget:container [id title & body]
   [:div.container
@@ -129,7 +132,7 @@ destination d_all    { file(\"/var/log/all.log\");             };
 log                  { source(s_system); destination(d_all); };"]
 
      [:div.col-md-10.col-md-offset-1.text-center
-      [:h3 "Get the source"]
+      [:h3 {:id "downloads"} "Get the source"]
       [:ul.list-inline
        [:li
         [:a {:href "https://github.com/balabit/syslog-ng/releases/latest"

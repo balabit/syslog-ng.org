@@ -294,6 +294,15 @@ footer a, footer a:hover {
         color: rgb(0, 255, 150);
 }
 
+.hi-icon.fa-download:after {
+        box-shadow: 0 0 0 4px rgb(234, 123, 21);
+}
+
+.hi-icon.fa-download:hover {
+        background: rgba(234, 123, 21, 1);
+        color: rgb(0, 75, 129);
+}
+
 @media screen and (max-width: 768px) {
   .navbar ul.nav li {
     text-align: center;
