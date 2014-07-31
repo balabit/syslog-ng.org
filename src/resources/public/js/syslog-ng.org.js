@@ -12,7 +12,7 @@ $(document).ready(function () {
     var badge_name = repo.replace(/-/g, "--");
     $.getJSON("https://api.github.com/repos/balabit/" + repo + "/releases",
               function (data) {
-                var v = data[0].tag_name.replace(/^[^0-9]*/, "");
+                var v = data.filter(function (e) { return !e.prerelease; })[0].tag_name.replace(/^[^0-9]*/, "");
                 $("#release-" + repo + " img").attr('src', "//img.shields.io/badge/" + badge_name + "-" + v + "-246EAB.svg?style=flat");
             })
   };
