@@ -111,14 +111,10 @@
            "so either ")
       [:code "apt-get install syslog-ng"] " or "
       [:code "yum install syslog-ng"] " is enough to get started. "
-      "For other distributions and operating systems, the "
-      (link-to
-       "http://www.balabit.com/network-security/syslog-ng/opensource-logging-system/downloads/3rd-party"
-       "third-party packages list")
-      " may be of use. To compile from source, please consult the "
-      (link-to
-       "https://github.com/balabit/syslog-ng#installation-from-source"
-       "README") "."]
+      "For other distributions, operating systems, and for "
+      "compiling from source, see the "
+      [:a.nav-link {:href "#downloads"} "downloads"]
+      " section below."]
      [:p
       "Once installed, a simple configuration (to be placed in "
       [:code "/etc/syslog-ng/syslog-ng.conf"] "), that puts all "
@@ -143,7 +139,12 @@ log                  { source(s_system); destination(d_all); };"]
         [:a {:href "https://github.com/balabit/syslog-ng-incubator/releases/latest"
              :id "release-syslog-ng-incubator"}
          [:img {:src
-                "//img.shields.io/badge/syslog--ng--incubator-latest-246EAB.svg?style=flat"}]]]]]]]))
+                "//img.shields.io/badge/syslog--ng--incubator-latest-246EAB.svg?style=flat"}]]]
+       [:li
+        [:a {:href "#downloads-3rd-party"
+             :data-toggle "modal"}
+         [:img {:src
+                "//img.shields.io/badge/packages-third%20party-green.svg?style=flat"}]]]]]]]))
 
 (defn- widget:highlight-ball [icon title text]
   [:div.col-md-4.col-sm-6.highlight
@@ -356,6 +357,57 @@ log                  { source(s_system); destination(d_all); };"]
     (page:analytics)])
   )
 
+(defn- downloads:3rd-party []
+  [:div.modal.fade {:id "downloads-3rd-party"
+                    :tabindex -1
+                    :role "dialog"
+                    :aria-labelledby "downloads-3rd-party-label"
+                    :aria-hidden "true"}
+   [:div.modal-dialog.modal-lg
+    [:div.modal-content
+     [:div.modal-header
+      [:button.close {:type "button"
+                      :data-dismiss "modal"}
+       [:span {:aria-hidden "true"} "&times;"]
+       [:span.sr-only "Close"]]
+      [:h4.modal-title {:id "downloads-3rd-party-label"}
+       "Third party packages"]]
+
+     [:div.modal-body
+      [:p
+       "BalaBit only provides sources for syslog-ng OSE, the packages "
+       "mentioned here are the works of distribution maintainers and "
+       "other third parties. For platforms not listed here, and for "
+       "officially supported packages, please see the "
+       (link-to "#" "syslog-ng Premium Edition")
+       ", which includes binaries for over 40 platforms (including "
+       "recent and legacy Linux distributions, UNIX variants, BSD, "
+       "HP-UX, IBM AIX, Solaris, Microsoft Windows and more)."]
+      [:hr]
+      [:h3 "Linux / FreeBSD"]
+      [:dl
+       [:dt "Debian / Ubuntu"]
+       [:dd "The Debian and Ubuntu distributions includes syslog-ng, "
+        "information about its version can be found on the "
+        "respective package page for "
+        [:a {:href "#"} "Debian"]
+        " and "
+        [:a {:href "#"} "Ubuntu"]
+        ". Unofficial, up-to-date packages for current and older "
+        "distribution releases are available from "
+        [:a {:href "#"} "this repository"]
+        ". To report bugs, use the "
+        [:code "reportbug syslog-ng"] " command."]
+
+       [:dt "Fedora"]
+       [:dd "..."]]
+      ]
+
+     [:div.modal-footer
+      [:button.btn.btn-primary {:type "button"
+                                :data-dismiss "modal"}
+       "Close"]]]]])
+
 (defn- eol:intro []
   [:div.modal.fade {:id "eol"
                     :tabindex -1
@@ -457,7 +509,7 @@ log                  { source(s_system); destination(d_all); };"]
              (f body))
            (cycle [identity widget:container-alternate])
            [(page:getting-started) (page:highlights) (page:why)
-            (page:news) (eol:intro)])))))
+            (page:news) (eol:intro) (downloads:3rd-party)])))))
 
 (defn rss []
   (with-base-url "http://www.syslog-ng.org/"
