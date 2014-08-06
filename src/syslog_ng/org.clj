@@ -1,12 +1,13 @@
 (ns syslog-ng.org
   (:require [stasis.core :as stasis]
-            [syslog-ng.org.widgets :as w]
             [ring.middleware.content-type :refer [wrap-content-type]]
             [optimus.prime :as optimus]
             [optimus.assets :as assets]
             [optimus.optimizations :as optimizations]
             [optimus.strategies :refer [serve-live-assets serve-frozen-assets]]
-            [optimus.export]))
+            [optimus.export]
+
+            [syslog-ng.org.pages :as pages]))
 
 (defn get-assets []
   (concat
@@ -19,8 +20,8 @@
    (assets/load-assets "resources/public"
                        ["/images/logo.48x48.png"])))
 
-(def pages {"/index.html" (w/index)
-            "/news.rss" (w/rss)})
+(def pages {"/index.html" (pages/index)
+            "/news.rss" (pages/rss)})
 
 (def app (-> (stasis/serve-pages pages)
              (optimus/wrap get-assets optimizations/all
