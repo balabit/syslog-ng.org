@@ -12,18 +12,15 @@
             [syslog-ng.org.parts.news :as news]
             [syslog-ng.org.parts.eol :as eol]))
 
-(def ^:dynamic *root-url*)
-
 (defn index []
-  (with-redefs [*root-url* ""]
-    (page/wrap
-     (list (top/jumbotron)
-      (map (fn [f body]
-             (f body))
-           (cycle [identity widgets/container-alternate])
-           [(getting-started/block) (highlights/balls)
-            (why/why-syslog-ng?)
-            (news/page) (eol/infobox)])))))
+  (page/wrap
+   (list (top/jumbotron)
+         (map (fn [f body]
+                (f body))
+              (cycle [identity widgets/container-alternate])
+              [(getting-started/block) (highlights/balls)
+               (why/why-syslog-ng?)
+               (news/page) (eol/infobox)]))))
 
 (defn rss []
   (with-base-url "http://www.syslog-ng.org/"
