@@ -16,6 +16,20 @@ syslog-ng.org news
 </description>
 <item>
 <title>
+New release: syslog-ng OSE 3.5.6
+</title>
+<link>
+http://www.syslog-ng.org/#news/2014-08-05
+</link>
+<description>
+<![CDATA[<h4 id="news/2014-08-05">New release: syslog-ng OSE 3.5.6<small class="pull-right"><i class="fa fa-calendar"></i> 2014-08-05</small></h4><p>A new version of the syslog-ng 3.5 stable branch has been released. Highlights include a memory leak fix, and <code>pdbtool merge</code> generating patterndb v4 files.</p><p>For more information, please see the <a href="https://github.com/balabit/syslog-ng/releases/tag/v3.5.6">release notes</a>!</p>]]>
+</description>
+<pubDate>
+Tue, 05 Aug 2014 00:00:00 +0000
+</pubDate>
+</item>
+<item>
+<title>
 Google Summer of Code 2014: Midterm
 </title>
 <link>
