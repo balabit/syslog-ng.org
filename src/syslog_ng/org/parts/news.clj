@@ -16,6 +16,21 @@
 
 (def news-feed
   [(news:item
+    "New release: syslog-ng OSE 3.5.6"
+    "2014-08-05"
+
+    [:p
+     "A new version of the syslog-ng 3.5 stable branch has been "
+     "released. Highlights include a memory leak fix, and "
+     [:code "pdbtool merge"] " generating patterndb v4 files."]
+
+    [:p
+     "For more information, please see the "
+     (link-to
+      "https://github.com/balabit/syslog-ng/releases/tag/v3.5.6"
+      "release notes") "!"])
+
+   (news:item
     "Google Summer of Code 2014: Midterm"
     "2014-06-30"
     [:p
