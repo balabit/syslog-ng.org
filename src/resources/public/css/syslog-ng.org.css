@@ -303,6 +303,15 @@ footer a, footer a:hover {
         color: rgb(0, 75, 129);
 }
 
+.hi-icon.fa-bug:after {
+        box-shadow: 0 0 0 4px rgb(187, 125, 48);
+}
+
+.hi-icon.fa-bug:hover {
+        background: rgba(187, 125, 48, 1);
+        color: rgb(243, 229, 204);
+}
+
 @media screen and (max-width: 768px) {
   .navbar ul.nav li {
     text-align: center;
