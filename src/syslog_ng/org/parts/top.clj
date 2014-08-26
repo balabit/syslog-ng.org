@@ -33,6 +33,9 @@
        [:a {:href "https://github.com/balabit/syslog-ng"
             :title "Source code"}
         [:i.hi-icon.fa.fa-github]]
+       [:a {:href "https://waffle.io/balabit/syslog-ng"
+            :title "Issues & roadmap"}
+        [:i.hi-icon.fa.fa-bug]]
        [:a {:href "https://lists.balabit.hu/mailman/listinfo/syslog-ng"
             :title "Mailing list"}
         [:i.hi-icon.fa.fa-envelope]]
