@@ -48,4 +48,9 @@ log                  { source(s_system); destination(d_all); };"]
         [:a {:href "https://github.com/balabit/syslog-ng-incubator/releases/latest"
              :id "release-syslog-ng-incubator"}
          [:img {:src
-                "//img.shields.io/badge/syslog--ng--incubator-latest-246EAB.svg?style=flat"}]]]]]]]))
+                "//img.shields.io/badge/syslog--ng--incubator-latest-246EAB.svg?style=flat"}]]]
+       [:li
+        [:a {:href "https://github.com/balabit/syslog-ng/releases"
+             :id "release-syslog-ng-beta"}
+         [:img {:src
+                "//img.shields.io/badge/syslog--ng%20BETA-latest-F7841E.svg?style=flat"}]]]]]]]))
