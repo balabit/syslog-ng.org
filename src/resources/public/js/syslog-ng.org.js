@@ -24,5 +24,4 @@ $(document).ready(function () {
 
   get_latest_release("syslog-ng", false);
   get_latest_release("syslog-ng-incubator", false);
-  get_latest_release("syslog-ng", true, "syslog--ng%20BETA", "syslog-ng-beta", "F7841E");
 });
