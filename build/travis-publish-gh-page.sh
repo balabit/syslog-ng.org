@@ -21,8 +21,7 @@ git config --global user.name "travis-ci"
 
 cp -R out "$HOME"/syslog-ng.org
 
-git clone --quiet \
-          --branch=gh-pages \
+git clone --branch=gh-pages \
           "https://${GH_TOKEN}@github.com/$PROJECT_NAME" \
           "$HOME"/gh-pages >/dev/null 2>/dev/null
 
@@ -31,8 +30,8 @@ mv "$HOME"/syslog-ng.org/* "$HOME"/gh-pages/
 cp CNAME "$HOME"/gh-pages/
 
 cd "$HOME"/gh-pages/
-git add -f {bundles,images,index.html,news.rss} CNAME >/dev/null 2>/dev/null
-git commit -m "Publishing syslog-ng.org build $TRAVIS_BUILD_NUMBER" >/dev/null 2>/dev/null
-git push -fq origin gh-pages >/dev/null 2>/dev/null
+git add -f {bundles,images,index.html,news.rss} CNAME 
+git commit -m "Publishing syslog-ng.org build $TRAVIS_BUILD_NUMBER"
+git push -fq origin gh-pages
 
 echo "Finished!"
