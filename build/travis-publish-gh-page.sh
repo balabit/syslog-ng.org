@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 PROJECT_NAME="balabit/syslog-ng.org"
 
 echo "syslog-ng.org github.io builder:"
