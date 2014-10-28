@@ -16,6 +16,21 @@
 
 (def news-feed
   [(news:item
+    "New release: syslog-ng OSE 3.6.1"
+    "2014-10-22"
+
+    [:p
+     "The first production ready release of the syslog-ng branch "
+     "has been released. Highlights include new modules that "
+     "graduated from the Incubator, and other enhancements."]
+
+    [:p
+     "For more information, please see the "
+     (link-to
+      "https://czanik.blogs.balabit.com/2014/10/syslog-ng-3-6-1-is-released/"
+      "announcement blog post") "!"])
+
+   (news:item
     "New release: syslog-ng OSE 3.5.6"
     "2014-08-05"
 
