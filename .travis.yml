@@ -9,4 +9,4 @@ after_success:
   - build/travis-publish-gh-page.sh
 env:
   global:
-    secure: "LebgqWMz930ET4y98qyusP5HpJ+0D42nU0IW1IvBFKAA+8GQ8GDkgotYFkaY1I0rlGS8o+MINTJnCKLp+1PshzLvRJ7DLWLRLa2AoU12wD7FOeg8mKGqHVlNT1Th3e0WgmMsQLqNnyiCJYMLQAeaZ/qUuA68FkLVs08IvCJSvnA="
+    secure: "QiKh+Ier8XgLTkqQ5sCM8kCjw3tx/1qJwCNMEtM5uJ2U/SIAflAi0uRK2GGLyqGjxdDJDeB6Y5ph3XjQoOTj7Jk/akXsXGeRO5CP4eZehnxLK3BsJRj3P45rCoAXeznc9fxUy+2/zq0fbNLLrN/LwKgbBFV6OGc1ZFSezTAtj6Q="
