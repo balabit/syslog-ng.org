@@ -16,6 +16,20 @@ syslog-ng.org news
 </description>
 <item>
 <title>
+New Incubator release: syslog-ng-incubator 0.4.0
+</title>
+<link>
+http://www.syslog-ng.org/#news/2014-12-10
+</link>
+<description>
+<![CDATA[<h4 id="news/2014-12-10">New Incubator release: syslog-ng-incubator 0.4.0<small class="pull-right"><i class="fa fa-calendar"></i> 2014-12-10</small></h4><p>The first release of the Incubator to support syslog-ng OSE 3.6.1, with a number of bugfixes and new features, including Java and Kafka destinations, a Grok parser, and a ZMQ source/destination pair.</p><p>For more information, please see the <a href="https://github.com/balabit/syslog-ng-incubator/releases/tag/syslog-ng-incubator-0.4.0">release notes</a>!</p>]]>
+</description>
+<pubDate>
+Wed, 10 Dec 2014 00:00:00 +0000
+</pubDate>
+</item>
+<item>
+<title>
 New release: syslog-ng OSE 3.6.1
 </title>
 <link>
