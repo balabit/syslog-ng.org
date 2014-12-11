@@ -16,6 +16,22 @@
 
 (def news-feed
   [(news:item
+    "New Incubator release: syslog-ng-incubator 0.4.0"
+    "2014-12-10"
+
+    [:p
+     "The first release of the Incubator to support syslog-ng OSE "
+     "3.6.1, with a number of bugfixes and new features, including "
+     "Java and Kafka destinations, a Grok parser, and a ZMQ "
+     "source/destination pair."]
+
+    [:p
+     "For more information, please see the "
+     (link-to
+      "https://github.com/balabit/syslog-ng-incubator/releases/tag/syslog-ng-incubator-0.4.0"
+      "release notes") "!"])
+
+   (news:item
     "New release: syslog-ng OSE 3.6.1"
     "2014-10-22"
 
