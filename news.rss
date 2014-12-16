@@ -16,6 +16,20 @@ syslog-ng.org news
 </description>
 <item>
 <title>
+New release: syslog-ng OSE 3.6.2
+</title>
+<link>
+http://www.syslog-ng.org/#news/2014-12-16
+</link>
+<description>
+<![CDATA[<h4 id="news/2014-12-16">New release: syslog-ng OSE 3.6.2<small class="pull-right"><i class="fa fa-calendar"></i> 2014-12-16</small></h4><p>First maintenance release for 3.6.x series has been published. Highlights include ten bugfixes and <code>loggen --permanent</code>  feature for sending logs forever.</p><p>For more information, please see the <a href="https://github.com/balabit/syslog-ng/releases/tag/syslog-ng-3.6.2">release notes</a>!</p>]]>
+</description>
+<pubDate>
+Tue, 16 Dec 2014 00:00:00 +0000
+</pubDate>
+</item>
+<item>
+<title>
 New Incubator release: syslog-ng-incubator 0.4.0
 </title>
 <link>
