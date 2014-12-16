@@ -15,7 +15,23 @@
    :content content})
 
 (def news-feed
-  [(news:item
+  [
+   (news:item
+    "New release: syslog-ng OSE 3.6.2"
+    "2014-12-16"
+
+    [:p
+     "First maintenance release for 3.6.x series has been published. "
+     "Highlights include ten bugfixes and " [:code "loggen --permanent"] " "
+     " feature for sending logs forever."]
+
+    [:p
+     "For more information, please see the "
+     (link-to
+      "https://github.com/balabit/syslog-ng/releases/tag/syslog-ng-3.6.2"
+      "release notes") "!"])
+
+   (news:item
     "New Incubator release: syslog-ng-incubator 0.4.0"
     "2014-12-10"
 
