@@ -29,7 +29,7 @@
       [:code "/etc/syslog-ng/syslog-ng.conf"] "), that puts all "
       "system logs down into a single file, is presented below:"]
      [:pre
-      "@version: 3.5
+      "@version: 3.6
 @include \"scl.conf\"
 
 source      s_system { system(); internal();                 };
